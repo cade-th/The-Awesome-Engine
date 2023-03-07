@@ -1,5 +1,6 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <stdio.h>
 
 #include <iostream>
 
@@ -14,7 +15,13 @@ int main()
 {
     // glfw: initialize and configure
     // ------------------------------
-    glfwInit();
+    // Initialize GLFW
+    if( !glfwInit() )
+    {
+        printf("didn't work!");
+        exit( EXIT_FAILURE );
+    }
+    
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -25,7 +32,10 @@ int main()
 
     // glfw window creation
     // --------------------
+    
+    
     GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
+    printf("hello");
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
