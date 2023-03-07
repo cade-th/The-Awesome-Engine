@@ -13,6 +13,8 @@ const unsigned int SCR_HEIGHT = 600;
 
 int main()
 {
+
+    printf("hello");
     // glfw: initialize and configure
     // ------------------------------
     // Initialize GLFW
@@ -35,7 +37,7 @@ int main()
     
     
     GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
-    printf("hello");
+    printf("hello\n");
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
